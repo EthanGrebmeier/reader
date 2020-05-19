@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reader</title>
+    <link href="https://fonts.googleapis.com/css?family=Carter+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <ng-template [ngIf]="!infoClicked">
+        <div class="main">
+            
+    
+            <div style="text-align: center;" class="form">
+    
+                <div class="flex_row">
+                    <div class="flex_col">
+                        <pre class="word_row"> {{ currWord }} </pre>
+                        <div class="flex_row wpm_row">
+                            <span id="wpm" class="wpm_num"> {{ wpmNum }} </span> <div class="wpm">  &nbsp; WPM  </div>
+                        </div>
+                        <div class = "slider_row">
+                            <input type="range" min="60" max="500" value = "200" class="slider" id="myRange" (change)="getSliderValue($event)" [disabled]='playState' >
+                        </div>
+                    </div>
+    
+                    <div class="reader_bar flex_col">
+    
+                        <div class="cont_row">
+                            <div class="flex_row play_row">
+                                <div> <button class="button" id="start" type="button" [ngClass]="playClass()" (click)="startPress($event)"> {{ playPause }} </button> </div>
+                            </div>
+                            <div class="flex_row stop_row">
+                                <div> <button class="button stop" id="stop" type="button"(click)="stopPress($event)"> Stop </button> </div>
+                            </div>
+                            
+                            <div class="flex_row info_row">
+                                <div> <button class="button info-button" id="info" (click)="infoClick()"> Info </button> </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                
+                </div>
+    
+                <textarea style="font-family: Calibri" type='text' class="input" rows="23" cols="87" placeholder="Paste Text Here..." required [(ngModel)]="wordsString"> </textarea>
+            </div>
+    
+        </div>
+    </ng-template>
+
+
+    <ng-template [ngIf]="infoClicked">
+        <div class="wrapper">
+            <div class="info">
+                <div class="info_content">
+    
+                    <div class="info_header">
+                        <span class="close" (click)="closeClick()">&times;</span>
+                        <h2> About Reader</h2>
+                    </div>
+
+                    <div class="info_text"> 
+                        <p> 
+                            The average human reads at a speed of about 200-250 words per minute. <br/> <br/>
+                            Reader helps you to increase that rate by enabling your to read without having to move your eyes across a page.<br/> <br/>
+                            Simply paste in your desired block of text, select your Words Per Minute with the slider, and click Start to begin! <br/><br/>
+                        </p>
+                    </div>
+
+                    <div class="changelog">
+                        <h2> Changelog </h2>
+                        <h3> April 7th 2020 (v0.1)</h3>
+                        <pre>   - First working version of Reader </pre>
+                        <h3> April 8th 2020 (v0.2)</h3>
+                        <pre>   - Styled "Play" button</pre>
+                        <pre>   - Formatted for mobile</pre>
+                        <h3> April 11th 2020 (v0.3)</h3>
+                        <pre>   - Added "Info" button</pre>
+                        <pre>   - Added empty text fallback</pre>
+                        <h3> April 12th 2020 (v0.4)</h3>
+                        <pre>   - Added "Pause" button</pre>
+                        <h3> April 13th 2020 (v0.41)</h3>
+                        <pre>   - Added "Stop" button</pre>
+                        <h3> April 24th 2020 (v0.5)</h3>
+                        <pre>   - Visual overhaul to match new site design</pre>
+                        <h3> April 30th 2020 (v0.6)</h3>
+                        <pre>   - Ported to Angular.JS </pre>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+<footer>Copyright 2020© Ethan Grebmeier</footer>
+</body>
+
+
+
+
+</html>
