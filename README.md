@@ -1,1 +1,1 @@
-A speed reading assistant application
+A speed reading assistant application written in Angular
