@@ -1,4 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 body{
-    margin: 0;
+    margin:0;
+}
+.app_link_holder{
+    height: 0%;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+
+    position: absolute;
+
+    margin: 0vw 0vw 0vw 2vw;
+}
+
+.app_link{
+    
+
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 3vw;
+    color: white;
+    text-shadow: -.2vh .2vh #676767;
+    text-decoration: none;
+
+    margin-top: 0vh;
+
+    transition: color 200ms, text-shadow 200ms, margin-top 200ms;
+    
+    &:hover{
+        color: #676767;
+        margin-top: -.4vh;
+    
+    }
+}
+
+
+.modalClicked{
+    display: block;
+}
+
+.modalNotClicked{
+    display: none;
+    line-height: normal;
+    position: fixed;
+    z-index: 1;
+    padding-top: 5vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    left: 0;
+    top: 0;
+    width: 60vw;
+    max-width: 100%;
+    overflow: auto;
+}
+
+
+footer{
+    font-size: 2rem;
+    margin-top: 10.8vh;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    background: transparent;
+    text-shadow: -.3vh .3vh #676767;
+    position: relative;
+}
+
+
+@media (max-width: 1024px) {
+    .app_link_holder{
+        top: 0;
+        display: flex;
+
+        margin: 0vw 0vw 0vw 3.5vw;
+
+    }
+
+    .app_link{
+        text-align: center;
+
+        font-family: 'Hammersmith One', sans-serif;
+        font-size: 8vw;
+        color: white;
+        text-shadow: -.4vw .4vw #676767;
+        text-decoration: none;
+
+        transition: color 200ms, text-shadow 200ms, margin-top 200ms;
+
+        &:hover{
+            color: #676767;
+            margin-top: -.4vh;
+        
+        }
+    }
+
+    footer{
+        font-size: 1.1rem;
+        margin-top: 8vh;
+        text-shadow: -.2vh .2vh #676767;
+
+    }
 }
