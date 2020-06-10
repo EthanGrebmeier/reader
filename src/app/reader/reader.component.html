@@ -8,6 +8,7 @@
 
 </head>
 <body>
+    
     <ng-template [ngIf]="!infoClicked">
         <div class="main">
             
@@ -21,7 +22,7 @@
                             <span id="wpm" class="wpm_num"> {{ wpmNum }} </span> <div class="wpm">  &nbsp; WPM  </div>
                         </div>
                         <div class = "slider_row">
-                            <input type="range" min="60" max="500" value = "200" class="slider" id="myRange" (change)="getSliderValue($event)" [disabled]='playState' >
+                            <input type="range" min="60" max="500" value = "200" class="slider" id="myRange" (change)="getSliderValue($event)">
                         </div>
                     </div>
     
@@ -56,9 +57,9 @@
         <div class="wrapper">
             <div class="info">
                 <div class="info_content">
-    
+                    <span class="close" (click)="closeClick()">&times;</span>
                     <div class="info_header">
-                        <span class="close" (click)="closeClick()">&times;</span>
+                        
                         <h2> About Reader</h2>
                     </div>
 
