@@ -1,8 +1,14 @@
+$font1: 'Montserrat', sans-serif;
+
 body{
     background-color: #0BC9CD;
     height: 100%;
     min-height: 100%;
     max-height: 100%;
+}
+
+.main{
+    height: 100%;
 }
 
 
@@ -39,9 +45,9 @@ body{
 .word_row{
     padding-top: 7vh;
     margin-top: 0vh;
-    font-family: 'Hammersmith One', sans-serif;
+    font-family:  $font1;
     text-align: center;
-    font-size: 8rem;
+    font-size: 7.4rem;
     margin-bottom: 1vh;
 }
 
@@ -67,12 +73,12 @@ body{
 
 .wpm{
     display: flex;
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: $font1;
     text-shadow: -.3vh .3vh #ffffff;
 }
 
 .wpm_num{
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: $font1;
     text-shadow: -.3vh .3vh #ffffff;
 }
 
@@ -102,7 +108,7 @@ body{
 
     color: white;
     font-size: 3rem;
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: $font1;
 
     transition: color 300ms, background 300ms, border 300ms;
 }
@@ -158,7 +164,8 @@ body{
     resize: none;
     width: 55vw;
     height: 35vh;
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: $font1;
+    margin-bottom: 3.15rem;
 }
 
 .wrapper{
@@ -168,15 +175,17 @@ body{
 
 .info{
     margin-top: 7vh;
-    margin-bottom: -1.8vh;
+    
     background: #1D8A99;
     width: 80vw;
     text-align: center;
     max-width: 100%;
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: $font1;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 50rem;
+    margin-bottom: .68rem;
 }
 
 .info_content{
@@ -207,16 +216,18 @@ body{
     width: 50vw;
     margin-top: 3vh;
     font-size: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font1;
     margin-bottom: 0;
 }
 
 .close {
+
     color: #aaaaaa;
     float: right;
     font-size: 4rem;
     font-weight: bold;
-    margin-left: 74vw;
+    margin-left: 76vw;
+    margin-top: 2rem;
 }
 
 .close:hover,
@@ -229,42 +240,18 @@ body{
 
 
 footer{
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 @media (max-width: 1024px) {
 
-    .app_link_holder{
-        height: 0%;
-        top: 0;
-        display: flex;
-        margin-bottom: 0vh;
-    
-    }
-    
-    .app_link{
-        text-align: center;
-    
-        font-family: 'Hammersmith One', sans-serif;
-        font-size: 8vw;
-        color: white;
-        text-shadow: -.5vw .5vw #676767;
-        text-decoration: none;
-    
-    }
-    
-    .app_link:hover{
-        color: #676767;
-        text-shadow: -.1vw .1vw #ffffff;
-    
-    }
 
     .word_row{
         margin-top: 0vh;
         padding-top: 8vh;
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         text-align: center;
-        font-size: 12vw;
+        font-size: 10vw;
         margin-bottom: 6vh;
     }
 
@@ -280,13 +267,13 @@ footer{
 
     .wpm{
         display: flex;
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         text-shadow: -.3vh .3vh #ffffff;
         margin-bottom: 1vh;
     }
 
     .wpm_num{
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         text-shadow: -.3vh .3vh #ffffff;
     }
     .slider{
@@ -338,7 +325,7 @@ footer{
 
         cursor: pointer;
 
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         font-size: 1.6rem;
 
         transition: color 300ms, background 300ms, border 300ms;
@@ -383,7 +370,7 @@ footer{
         width: 50vw;
         margin-top: 3vh;
         font-size: 1rem;
-        font-family: Montserrat;
+        font-family: $font1;
         
 
     }
